@@ -1,0 +1,37 @@
+import { expect } from "chai"
+import { Maybe, MaybeType } from "./maybe"
+
+describe("using the maybe type", () => {
+	it("basic usage for nothing type", () => {
+		// will return undefined, then transformed to nothing
+		const maybeVal:Maybe<string> = Maybe(["A"].find(i => i == "B"));
+
+		switch (maybeVal.type) {
+			case MaybeType.Just:
+				expect.fail("Should not have a true value");
+				break;
+			case MaybeType.Nothing:
+				break;
+			// do not need below case in production
+			default:
+				expect.fail("unexpected type found");
+				break
+		}
+	})
+
+	it("basic usage for just type", () => {
+		const maybeVal:Maybe<number> = Maybe([1].find(i => i == 1));
+
+		switch (maybeVal.type) {
+			case MaybeType.Just:
+				break;
+			case MaybeType.Nothing:
+				expect.fail("Should have a true value");
+				break;
+			// do not need below case in production
+			default:
+				expect.fail("unexpected type found");
+				break
+		}
+	})
+})

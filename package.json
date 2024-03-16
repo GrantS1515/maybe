@@ -1,0 +1,22 @@
+{
+  "name": "maybe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx tsc-watch",
+    "test": "node_modules/mocha/bin/mocha.js -w --parallel src/**/*.spec.ts"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.12",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.0",
+    "mocha": "^10.3.0",
+    "tsc-watch": "^6.0.4",
+    "tsx": "^4.7.1"
+  }
+}
