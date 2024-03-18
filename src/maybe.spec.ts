@@ -12,10 +12,6 @@ describe("using the maybe type", () => {
 				break;
 			case MaybeType.Nothing:
 				break;
-			// do not need below case in production
-			default:
-				expect.fail("unexpected type found");
-				break
 		}
 	})
 
@@ -28,10 +24,6 @@ describe("using the maybe type", () => {
 			case MaybeType.Nothing:
 				expect.fail("Should have a true value");
 				break;
-			// do not need below case in production
-			default:
-				expect.fail("unexpected type found");
-				break
 		}
 	})
 })
