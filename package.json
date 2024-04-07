@@ -2,25 +2,25 @@
   "name": "maybe",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/maybe.js",
+  "type": "module",
   "scripts": {
     "compile": "npx tsc-watch",
     "lint": "npx eslint src/**/*.ts",
-    "test": "node_modules/mocha/bin/mocha.js -w --parallel src/**/*.spec.ts"
+    "test": "node_modules/mocha/bin/mocha.js -w --parallel dist/**/*.spec.js"
 
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/chai": "^4.3.12",
-    "@types/mocha": "^10.0.6",
     "chai": "^5.1.0",
     "mocha": "^10.3.0",
     "eslint": "^8.57.0",
+    "@types/chai": "^4.3.12",
+    "@types/mocha": "^10.0.6",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
-    "tsc-watch": "^6.0.4",
-    "tsx": "^4.7.1"
+    "tsc-watch": "^6.0.4"
   }
 }

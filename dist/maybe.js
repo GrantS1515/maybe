@@ -1,11 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Maybe = exports.MaybeType = void 0;
-var MaybeType;
+export var MaybeType;
 (function (MaybeType) {
     MaybeType["Just"] = "MaybeType__Just";
     MaybeType["Nothing"] = "MaybeType__Nothing";
-})(MaybeType || (exports.MaybeType = MaybeType = {}));
+})(MaybeType || (MaybeType = {}));
 function Just(v) {
     return {
         type: MaybeType.Just,
@@ -17,9 +14,8 @@ function Nothing() {
         type: MaybeType.Nothing,
     };
 }
-function Maybe(value) {
+export function Maybe(value) {
     return value === undefined || value == null
         ? Nothing()
         : Just(value);
 }
-exports.Maybe = Maybe;

@@ -8,8 +8,7 @@
         "strictNullChecks": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
-        "noUncheckedIndexedAccess": true,
-        "module": "Node16",
+        "noUncheckedIndexedAccess": true
     },
     "exclude": [
         "./node_modules",

@@ -1,5 +1,4 @@
 {
-	"require": "tsx",
-	"watch-files": ["src/**/*"],
+	"watch-files": ["dist/**/*"],
 	"timeout": 2000
 }
