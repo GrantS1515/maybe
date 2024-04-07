@@ -19,7 +19,7 @@ describe("using the maybe type", () => {
 		const maybeVal:Maybe<number> = Maybe([1].find(i => i == 1));
 
 		switch (maybeVal.type) {
-			case MaybeType.Just:
+			case MaybeType.Just;
 				break;
 			case MaybeType.Nothing:
 				expect.fail("Should have a true value");
