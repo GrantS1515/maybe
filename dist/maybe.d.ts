@@ -10,7 +10,6 @@ type Nothing = {
     type: typeof MaybeType.Nothing;
 };
 export type Maybe<T> = Just<T> | Nothing;
-declare function Just<T>(v: T): Just<T>;
-declare function Nothing(): Nothing;
-export declare function Maybe<T>(value: T | undefined | null): Maybe<T>;
+export declare function Just<T>(v: T): Just<T>;
+export declare function Nothing(): Nothing;
 export {};

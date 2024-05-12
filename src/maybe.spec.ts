@@ -1,29 +1,40 @@
 import { expect } from "chai"
-import { Maybe, MaybeType } from "./maybe.js"
+import { Maybe, Just, MaybeType, Nothing } from "./maybe.js"
 
 describe("using the maybe type", () => {
-	it("basic usage for nothing type", () => {
-		// will return undefined, then transformed to nothing
-		const maybeVal:Maybe<string> = Maybe(["A"].find(i => i == "B"));
 
-		switch (maybeVal.type) {
+	it("Can successfully return just a value", () => {
+		function sucessFn(): Maybe<number> {
+			return Just(5)
+		}
+
+		const maybeVal = sucessFn();
+
+		switch(maybeVal.type) {
 			case MaybeType.Just:
-				expect.fail("Should not have a true value");
+				expect(maybeVal.value).to.equal(5)
+				break;
+			case MaybeType.Nothing:
+				expect.fail("Should not be nothing")
+				break;
+		}
+
+	})
+
+	it("Can successfully return just a value", () => {
+		function failFn(): Maybe<number> {
+			return Nothing()
+		}
+
+		const maybeVal = failFn();
+
+		switch(maybeVal.type) {
+			case MaybeType.Just:
+				expect.fail("Should not get a value")
 				break;
 			case MaybeType.Nothing:
 				break;
 		}
 	})
 
-	it("basic usage for just type", () => {
-		const maybeVal:Maybe<number> = Maybe([1].find(i => i == 1));
-
-		switch (maybeVal.type) {
-			case MaybeType.Just:
-				break;
-			case MaybeType.Nothing:
-				expect.fail("Should have a true value");
-				break;
-		}
-	})
 })
