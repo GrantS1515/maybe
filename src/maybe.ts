@@ -26,3 +26,13 @@ export function Nothing(): Nothing {
 		type: MaybeType.Nothing,
 	}
 }
+
+export function Maybeify<T>(val: T): Maybe<T> {
+	if (val === null) {
+		return Nothing()
+	} else if (val === undefined) {
+		return Nothing()
+	} else {
+		return Just(val)
+	}
+}

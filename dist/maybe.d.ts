@@ -12,4 +12,5 @@ type Nothing = {
 export type Maybe<T> = Just<T> | Nothing;
 export declare function Just<T>(v: T): Just<T>;
 export declare function Nothing(): Nothing;
+export declare function Maybeify<T>(val: T): Maybe<T>;
 export {};

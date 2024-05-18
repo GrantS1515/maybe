@@ -14,3 +14,14 @@ export function Nothing() {
         type: MaybeType.Nothing,
     };
 }
+export function Maybeify(val) {
+    if (val === null) {
+        return Nothing();
+    }
+    else if (val === undefined) {
+        return Nothing();
+    }
+    else {
+        return Just(val);
+    }
+}
